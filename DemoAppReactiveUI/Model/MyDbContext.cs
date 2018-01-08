@@ -1,8 +1,8 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Data.Entity;
-using log4net;
+using System.Linq;
 
 namespace DemoAppReactiveUI.Model
 {
@@ -19,7 +19,6 @@ namespace DemoAppReactiveUI.Model
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
         }
 
         [DbConfigurationType(typeof(NpgsqlConfiguration))]
@@ -27,7 +26,8 @@ namespace DemoAppReactiveUI.Model
         {
             public NpgsqlConfiguration()
             {
-                System.Data.Entity.DbConfiguration.Loaded += (_, a) => {
+                System.Data.Entity.DbConfiguration.Loaded += (_, a) =>
+                {
                     a.AddDependencyResolver(new DbProviderDependencyResolver(), true);
                 };
                 SetProviderServices("Npgsql", Npgsql.NpgsqlServices.Instance);
@@ -43,7 +43,6 @@ namespace DemoAppReactiveUI.Model
                 if (type == typeof(System.Data.Common.DbProviderFactory))
                 {
                     return Npgsql.NpgsqlFactory.Instance;
-
                 }
                 else if (type == typeof(System.Data.Entity.Infrastructure.IProviderInvariantName) && key?.ToString() == "Npgsql.NpgsqlFactory")
                 {
@@ -57,7 +56,8 @@ namespace DemoAppReactiveUI.Model
             {
                 return new object[] { GetService(type, key) }.ToList().Where(o => o != null);
             }
-            class InvariantName : System.Data.Entity.Infrastructure.IProviderInvariantName
+
+            private class InvariantName : System.Data.Entity.Infrastructure.IProviderInvariantName
             {
                 public string Name { get; } = "Npgsql";
             }
@@ -76,7 +76,7 @@ namespace DemoAppReactiveUI.Model
             return GetConnectionString(databaseName: databaseName);
         }
 
-        static string GetConnectionString(string databaseName)
+        private static string GetConnectionString(string databaseName)
         {
             var databaseHost = Properties.Settings.Default.databaseHost;
             if (databaseHost.Length <= 0)

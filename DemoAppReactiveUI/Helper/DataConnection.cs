@@ -20,12 +20,10 @@ namespace DemoAppReactiveUI.Helper
                 var archiveName = posIDName + "_" + DateTime.Now.ToString("MM_dd_yyyy_HH_mm");
                 var query = "select pg_start_backup('" + archiveName + "');";
                 var result = ExecuteNonQuery(GetCommand(query));
-                //Console.WriteLine("ArchiveWALBackup START backup " + result);
 
                 // stop backup
                 query = "select pg_stop_backup();";
                 result = ExecuteNonQuery(GetCommand(query));
-                //Console.WriteLine("ArchiveWALBackup STOP backup " + result);
             }
             catch (Exception ex)
             {
