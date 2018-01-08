@@ -1,18 +1,42 @@
 ﻿using DemoAppReactiveUI.DataAccess;
 using DemoAppReactiveUI.Model;
+using DemoAppReactiveUI.ViewModel;
+using ReactiveUI;
+using System;
+using System.Reactive.Linq;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace DemoAppReactiveUI.Control
 {
     /// <summary>
     /// Interaction logic for LoginControl.xaml
     /// </summary>
-    public partial class LoginControl : UserControl
+    public partial class LoginControl : IViewFor<LoginViewModel>
     {
+        public static readonly DependencyProperty _viewModel =
+               DependencyProperty.Register("ViewModel", typeof(LoginViewModel), typeof(LoginControl));
+
+        public LoginViewModel ViewModel
+        {
+            get { return GetValue(_viewModel) as LoginViewModel; }
+            set { SetValue(_viewModel, value); }
+        }
+
+        object IViewFor.ViewModel
+        {
+            get { return ViewModel; }
+            set { ViewModel = value as LoginViewModel; }
+        }
+
         public LoginControl()
         {
             InitializeComponent();
+            this.WhenActivated(d => Binding(d));
+        }
+
+        private void Binding(Action<IDisposable> d)
+        {
+            d(this.BindCommand(ViewModel, vm => vm.ExecuteClickNumPad, x => x.Button0, Observable.Return("0")));
         }
 
         private void AddPIN(int number)
@@ -28,7 +52,7 @@ namespace DemoAppReactiveUI.Control
         private string updatePINText(int number)
         {
             var PIN = PINText.Text;
-            // find the most left "-" index
+            
             for (int i = 0; i < PIN.Length; i++)
             {
                 if (PIN[i] == '-')
@@ -57,56 +81,6 @@ namespace DemoAppReactiveUI.Control
         private void ProcessNewUserLogin(User newUser)
         {
             Window.GetWindow(this).Close();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            AddPIN(1);
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            AddPIN(2);
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            AddPIN(3);
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            AddPIN(4);
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            AddPIN(5);
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            AddPIN(6);
-        }
-
-        private void Button_Click_6(object sender, RoutedEventArgs e)
-        {
-            AddPIN(7);
-        }
-
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-            AddPIN(8);
-        }
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-            AddPIN(9);
-        }
-
-        private void Button_Click_9(object sender, RoutedEventArgs e)
-        {
-            AddPIN(0);
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)

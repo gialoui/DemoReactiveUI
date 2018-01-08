@@ -113,6 +113,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Control\ProductInfoControl.xaml.cs">
+      <DependentUpon>ProductInfoControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\UserDA.cs" />
     <Compile Include="Helper\DataConnection.cs" />
     <Compile Include="Model\MyDbContext.cs" />
@@ -128,6 +131,10 @@
       <DependentUpon>SearchDialog.xaml</DependentUpon>
     </Compile>
     <Page Include="Control\LoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ProductInfoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

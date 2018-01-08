@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoAppReactiveUI.View"
         mc:Ignorable="d"
-        Title="InformationWindow" Height="300" Width="300">
+        Title="InformationWindow" Height="421" Width="707">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.ColumnSpan="2" Content="Product ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+
     </Grid>
 </Window>
