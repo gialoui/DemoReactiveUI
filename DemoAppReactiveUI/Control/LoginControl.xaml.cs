@@ -48,7 +48,7 @@ namespace DemoAppReactiveUI.Control
 
             d(this.BindCommand(ViewModel, vm => vm.ExecuteClickClear, x => x.Clear));
             d(this.Bind(ViewModel, vm => vm.PINText, v => v.PINText.Text));
-            d(this.WhenAnyValue(v => v.ViewModel.PINText).Where(PINText => !PINText.Contains("-"))
+            d(this.WhenAnyValue(v => v.ViewModel.PINText)
                 .InvokeCommand(ViewModel.ExecuteVerifyPINText));
 
             d(this.WhenAnyObservable(v => v.ViewModel.ExecuteVerifyPINText).Where(loginUser => loginUser != null)

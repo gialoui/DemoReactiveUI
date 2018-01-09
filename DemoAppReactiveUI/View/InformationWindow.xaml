@@ -3,15 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DemoAppReactiveUI.View"
+        xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
         mc:Ignorable="d"
-        Title="InformationWindow" Height="421" Width="707">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Label Grid.ColumnSpan="2" Content="Product ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-
-    </Grid>
+        Title="Product Information" Height="462" Width="1400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <local:ProductInfoControl Margin="1400,0,-6,206" />
 </Window>

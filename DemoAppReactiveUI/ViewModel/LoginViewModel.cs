@@ -2,6 +2,7 @@
 using DemoAppReactiveUI.Model;
 using ReactiveUI;
 using System.Reactive;
+using System.Reactive.Linq;
 using System.Threading.Tasks;
 
 namespace DemoAppReactiveUI.ViewModel
@@ -23,13 +24,13 @@ namespace DemoAppReactiveUI.ViewModel
         public LoginViewModel()
         {
             ExecuteClickClear = ReactiveCommand.Create(ClearPINText);
-
-            ExecuteClickNumPad = ReactiveCommand.Create<int>( 
+            var canExecute = this.WhenAnyValue(v => v.PINText).Select(PINText => !PINText.Contains("-"));
+            ExecuteClickNumPad = ReactiveCommand.Create<int>(
                 number => AddPIN(number)
             );
 
             ExecuteVerifyPINText = ReactiveCommand.CreateFromTask<string, User>(
-                pin => VerifyPIN(pin)
+                pin => VerifyPIN(pin), canExecute
             );
         }
 
