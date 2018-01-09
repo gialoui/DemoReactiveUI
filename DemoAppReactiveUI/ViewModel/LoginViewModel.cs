@@ -1,34 +1,46 @@
-﻿using ReactiveUI;
+﻿using DemoAppReactiveUI.DataAccess;
+using DemoAppReactiveUI.Model;
+using ReactiveUI;
 using System.Reactive;
-using static System.Net.Mime.MediaTypeNames;
+using System.Threading.Tasks;
 
 namespace DemoAppReactiveUI.ViewModel
 {
     public class LoginViewModel : ReactiveObject
     {
-        public ReactiveCommand<string, Unit> ExecuteClickNumPad { get; protected set; }
+        public ReactiveCommand<int, Unit> ExecuteClickNumPad { get; protected set; }
+        public ReactiveCommand<Unit, Unit> ExecuteClickClear { get; protected set; }
+        public ReactiveCommand<string, User> ExecuteVerifyPINText { get; protected set; }
 
-        ObservableAsPropertyHelper<Text> _PINText;
-        public Text _PINText => _PINText.Value;
+        private string _PINText = "----";
+
+        public string PINText
+        {
+            get { return _PINText; }
+            set { this.RaiseAndSetIfChanged(ref _PINText, value); }
+        }
 
         public LoginViewModel()
         {
-            
+            ExecuteClickClear = ReactiveCommand.Create(ClearPINText);
+
+            ExecuteClickNumPad = ReactiveCommand.Create<int>( 
+                number => AddPIN(number)
+            );
+
+            ExecuteVerifyPINText = ReactiveCommand.CreateFromTask<string, User>(
+                pin => VerifyPIN(pin)
+            );
         }
 
         private void AddPIN(int number)
         {
             var PIN = updatePINText(number);
-
-            if (PIN.Contains("-") == false && PIN.Length >= 4)
-            {
-                verifyPIN(PIN);
-            }
         }
 
         private string updatePINText(int number)
         {
-            var PIN = PINText.Text;
+            var PIN = PINText;
 
             for (int i = 0; i < PIN.Length; i++)
             {
@@ -38,26 +50,25 @@ namespace DemoAppReactiveUI.ViewModel
                     break;
                 }
             }
-            PINText.Text = PIN;
+            PINText = PIN;
             return PIN;
         }
 
-        private void verifyPIN(string PIN)
+        private async Task<User> VerifyPIN(string PIN)
         {
-            var loginUser = UserDA.GetEnableUserByPIN(PIN);
+            var loginUser = await Task.Run(() => UserDA.GetEnableUserByPIN(PIN));
+
             if (loginUser == null)
             {
-                MessageBox.Show("Sorry, PIN number doesn't exist.");
-                PINText.Text = "----";
-                return;
+                PINText = "----";
             }
 
-            ProcessNewUserLogin(loginUser);
+            return loginUser;
         }
 
-        private void ProcessNewUserLogin(User newUser)
+        private void ClearPINText()
         {
-            Window.GetWindow(this).Close();
+            PINText = "----";
         }
     }
 }
