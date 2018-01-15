@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
         mc:Ignorable="d"
         Title="Product Information" Height="462" Width="1400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <local:ProductInfoControl Margin="1400,0,-6,206" />
+    <local:ProductInfoControl x:Name="ProductInfoControl" Margin="1400,0,-6,206" />
 </Window>

@@ -82,5 +82,41 @@ namespace DemoAppReactiveUI.Properties {
                 this["posID"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool shouldRoundUp {
+            get {
+                return ((bool)(this["shouldRoundUp"]));
+            }
+            set {
+                this["shouldRoundUp"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool taxEnable {
+            get {
+                return ((bool)(this["taxEnable"]));
+            }
+            set {
+                this["taxEnable"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double taxValue {
+            get {
+                return ((double)(this["taxValue"]));
+            }
+            set {
+                this["taxValue"] = value;
+            }
+        }
     }
 }

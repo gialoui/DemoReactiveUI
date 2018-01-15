@@ -1,4 +1,5 @@
-﻿using DemoAppReactiveUI.ViewModel;
+﻿using DemoAppReactiveUI.View;
+using DemoAppReactiveUI.ViewModel;
 using ReactiveUI;
 using System;
 using System.Reactive.Linq;
@@ -54,7 +55,10 @@ namespace DemoAppReactiveUI.Control
             d(this.WhenAnyObservable(v => v.ViewModel.ExecuteVerifyPINText).Where(loginUser => loginUser != null)
                 .Subscribe(_ =>
                 {
+                    var newDialog = new InformationWindow();
                     Window.GetWindow(this).Close();
+
+                    newDialog.Show();
                 }));
 
             d(this.WhenAnyObservable(v => v.ViewModel.ExecuteVerifyPINText).Where(loginUser => loginUser == null)

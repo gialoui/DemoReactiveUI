@@ -71,6 +71,6 @@
         <TextBlock Name="SchedulePrice" Grid.Column="5" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
         <Label Content="On Promotion" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
         <TextBlock Name="OnPromotion" Grid.Column="5" Grid.Row="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
-        <Button Content="Search" HorizontalAlignment="Center" Margin="0" Grid.Row="8" VerticalAlignment="Center" Width="90" HorizontalContentAlignment="Center" FontSize="22" Background="#FF151414" Foreground="White" Height="35" />
+        <Button Name="SearchBtn" Content="Search" HorizontalAlignment="Center" Margin="0" Grid.Row="8" VerticalAlignment="Center" Width="90" HorizontalContentAlignment="Center" FontSize="22" Background="#FF151414" Foreground="White" Height="35" />
     </Grid>
 </UserControl>

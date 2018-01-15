@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
         mc:Ignorable="d"
-        Title="SearchDialog" Height="430" Width="1200">
+        Title="SearchDialog" Height="430" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="10,0,265,0">
-        <local:SearchControl Margin="279,0,-66,21" />
+        <local:SearchControl x:Name="SearchControl" Margin="279,0,116,21" />
     </Grid>
 </Window>
