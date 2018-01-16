@@ -43,11 +43,11 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button Name="ResetFilters" Content="Reset Filters" HorizontalAlignment="Left" VerticalAlignment="Center" Height="35" Grid.Row="4" Grid.ColumnSpan="2" 
+        <Button Name="ResetFilters" Content="Reset Filters" HorizontalAlignment="Left" VerticalAlignment="Center" Height="35" Grid.Row="4" Grid.ColumnSpan="2"
                 FontSize="18" Background="#B0BEC5" Foreground="White" Margin="10,0,0,0" Width="110" Style="{DynamicResource CommonButtonStyle}" />
-        <Button Name="Cancel" Content="Cancel" HorizontalAlignment="Center" Height="35" Grid.Row="5" VerticalAlignment="Center" Width="68" 
+        <Button Name="Cancel" Content="Cancel" HorizontalAlignment="Center" Height="35" Grid.Row="5" VerticalAlignment="Center" Width="68"
                 FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" />
-        <Button Name="Search" Content="Search" HorizontalAlignment="Left" Height="35" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="68" 
+        <Button Name="Search" Content="Search" HorizontalAlignment="Left" Height="35" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="68"
                 FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" />
         <DataGrid Name="ProductList" Grid.Column="2" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="269" Width="674" VerticalAlignment="Top" Grid.RowSpan="6">
             <DataGrid.Columns>
@@ -133,7 +133,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="SelectProduct" Content="Select Product" Grid.Column="2" HorizontalAlignment="Right" Height="30" Grid.Row="6" VerticalAlignment="Top" Width="130" 
+        <Button Name="SelectProduct" Content="Select Product" Grid.Column="2" HorizontalAlignment="Right" Height="30" Grid.Row="6" VerticalAlignment="Top" Width="130"
                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Background="#FF53D337" Foreground="White" Margin="2,10,5,0" Style="{DynamicResource ButtonStyle1}" />
     </Grid>
 </UserControl>

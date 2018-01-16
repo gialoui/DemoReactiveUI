@@ -1,6 +1,5 @@
 ﻿using DemoAppReactiveUI.Model;
 using ReactiveUI;
-using System;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
@@ -64,7 +63,7 @@ namespace DemoAppReactiveUI.ViewModel
         {
             get => _Category;
         }
-        
+
         // Constructor
         public SearchViewModel()
         {

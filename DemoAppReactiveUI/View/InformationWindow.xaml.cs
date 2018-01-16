@@ -1,5 +1,4 @@
-﻿using DemoAppReactiveUI.Model;
-using System.Windows;
+﻿using System.Windows;
 
 namespace DemoAppReactiveUI.View
 {
@@ -11,13 +10,6 @@ namespace DemoAppReactiveUI.View
         public InformationWindow()
         {
             InitializeComponent();
-        }
-
-        public InformationWindow(Product pd)
-        {
-            InitializeComponent();
-
-            this.ProductInfoControl.SelectedProduct = pd;
         }
     }
 }

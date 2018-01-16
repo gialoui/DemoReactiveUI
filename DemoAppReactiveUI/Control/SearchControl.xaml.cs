@@ -1,9 +1,7 @@
 ﻿using DemoAppReactiveUI.Model;
-using DemoAppReactiveUI.View;
 using DemoAppReactiveUI.ViewModel;
 using ReactiveUI;
 using System;
-using System.Reactive;
 using System.Windows;
 
 namespace DemoAppReactiveUI.Control

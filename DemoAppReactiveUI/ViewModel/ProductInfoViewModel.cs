@@ -31,7 +31,8 @@ namespace DemoAppReactiveUI.ViewModel
         {
             return Observable.Start(() =>
             {
-                _searchProduct.Handle(Unit.Default).SubscribeOn(RxApp.MainThreadScheduler).Subscribe(p => {
+                _searchProduct.Handle(Unit.Default).SubscribeOn(RxApp.MainThreadScheduler).Subscribe(p =>
+                {
                     SelectedProduct = p;
                 });
             });
