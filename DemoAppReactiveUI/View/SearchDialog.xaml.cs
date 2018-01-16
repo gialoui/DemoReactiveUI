@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using DemoAppReactiveUI.Model;
+using System;
+using System.Windows;
 
 namespace DemoAppReactiveUI.View
 {
@@ -7,9 +9,19 @@ namespace DemoAppReactiveUI.View
     /// </summary>
     public partial class SearchDialog : Window
     {
+        public Product SelectedProduct;
+
         public SearchDialog()
         {
             InitializeComponent();
+
+            SearchControl.ViewModel.ExecuteSelectProduct.Subscribe(_ =>
+            {
+                SelectedProduct = SearchControl.ViewModel.SelectedProduct;
+
+                // Close the current dialog
+                DialogResult = true;
+            });
         }
     }
 }

@@ -29,48 +29,49 @@
 
         <!-- Column 1 -->
         <Label Content="Product ID" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="ProductID" Grid.Column="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="ProductID" Grid.Column="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Category" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="Category" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="Category" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Selling Price" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="SellingPrice" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="SellingPrice" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Cold Price" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="ColdPrice" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
-        <CheckBox Content="Is Open Price" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Margin="5,0,0,0" />
+        <TextBlock Name="ColdPrice" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
+        <CheckBox Name="IsOpenPrice" Content="Is Open Price" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Margin="5,0,0,0" />
 
         <Label Content="Supplier Code:" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="SupplierCode" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="SupplierCode" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Ind. Product:" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="IndProduct" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="IndProduct" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Last Updated:" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic" />
-        <TextBlock Name="LastUpdated" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontStyle="Italic" />
+        <TextBlock Name="LastUpdated" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontStyle="Italic" FontSize="20" />
 
         <!-- Column 2 -->
         <Label Content="Description" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
         <TextBlock Name="Description" Grid.Column="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Grid.ColumnSpan="2" />
         <Label Content="Display" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="Display" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="Display" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Barcode 1" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="Barcode1" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="Barcode1" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Barcode 2" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="Barcode2" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="Barcode2" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Barcode 3" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="Barcode3" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="Barcode3" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
 
         <Label Content="Unit per Carton:" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="UnitPerCarton" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="UnitPerCarton" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Non-Tax Product:" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
         <CheckBox Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Margin="5,0,0,0" />
         <Label Content="Sale By Weight:" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <CheckBox Name="SaleByWeight" Grid.Column="3" Grid.Row="7" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="192" Margin="5,0,0,0" VerticalContentAlignment="Center" />
+        <CheckBox Name="SaleByWeight" Grid.Column="3" Grid.Row="7" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="192" Margin="5,0,0,0" VerticalContentAlignment="Center" FontSize="20" />
 
         <!-- Column 3 -->
         <Label Content="Inventory" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="Inventory" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="Inventory" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="Schedule Price:" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="SchedulePrice" Grid.Column="5" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
+        <TextBlock Name="SchedulePrice" Grid.Column="5" Grid.Row="2" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
         <Label Content="On Promotion" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
-        <TextBlock Name="OnPromotion" Grid.Column="5" Grid.Row="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" />
-        <Button Name="SearchBtn" Content="Search" HorizontalAlignment="Center" Margin="0" Grid.Row="8" VerticalAlignment="Center" Width="90" HorizontalContentAlignment="Center" FontSize="22" Background="#FF151414" Foreground="White" Height="35" />
+        <TextBlock Name="OnPromotion" Grid.Column="5" Grid.Row="3" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Center" Width="192" FontSize="20" />
+        <Button Name="SearchBtn" Content="Search" HorizontalAlignment="Center" Margin="0" Grid.Row="8" VerticalAlignment="Center" Width="85" HorizontalContentAlignment="Center" 
+                FontSize="22" Background="#B0BEC5" Foreground="White" Height="35" Style="{DynamicResource CommonButtonStyle}" VerticalContentAlignment="Center" />
     </Grid>
 </UserControl>

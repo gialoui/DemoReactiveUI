@@ -74,16 +74,8 @@ namespace DemoAppReactiveUI.ViewModel
 
             ExecuteResetFilters = ReactiveCommand.Create(ResetFilters);
             ExecuteSearch = ReactiveCommand.Create(SearchProduct);
-            ExecuteSelectProduct = ReactiveCommand.CreateFromObservable<Unit, Unit>(x => SelectProductImp());
+            ExecuteSelectProduct = ReactiveCommand.Create(() => { });
             ExecuteCancel = ReactiveCommand.Create(() => { });
-        }
-
-        public IObservable<Unit> SelectProductImp()
-        {
-            return Observable.Start(() =>
-            {
-                _searchResult.Handle(SelectedProduct).Subscribe();
-            });
         }
 
         private void GetAllCategories()

@@ -1,6 +1,8 @@
 ﻿using DemoAppReactiveUI.Model;
 using ReactiveUI;
+using System;
 using System.Reactive;
+using System.Reactive.Linq;
 
 namespace DemoAppReactiveUI.ViewModel
 {
@@ -22,7 +24,17 @@ namespace DemoAppReactiveUI.ViewModel
         public ProductInfoViewModel()
         {
             _searchProduct = new Interaction<Unit, Product>();
-            ExecuteSearch = ReactiveCommand.Create(() => { });
+            ExecuteSearch = ReactiveCommand.CreateFromObservable(SearchImp);
+        }
+
+        public IObservable<Unit> SearchImp()
+        {
+            return Observable.Start(() =>
+            {
+                _searchProduct.Handle(Unit.Default).SubscribeOn(RxApp.MainThreadScheduler).Subscribe(p => {
+                    SelectedProduct = p;
+                });
+            });
         }
     }
 }
