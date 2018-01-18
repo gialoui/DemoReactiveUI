@@ -4,6 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
-        mc:Ignorable="d" Height="457.64" Width="300.432" Background="#FF151414" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <local:LoginControl Margin="0,0,4,-19" />
+        mc:Ignorable="d" Height="450" Width="300" Background="#FF151414" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <local:LoginControl />
 </Window>

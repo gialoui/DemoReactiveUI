@@ -10,6 +10,8 @@ namespace DemoAppReactiveUI.ViewModel
     {
         public ReactiveCommand<Unit, Unit> ExecuteSearch { get; protected set; }
 
+        public ReactiveCommand<Unit, Unit> ExecuteCloseWindow { get; protected set; }
+
         private readonly Interaction<Unit, Product> _searchProduct;
         public Interaction<Unit, Product> SearchProductResult => _searchProduct;
 
@@ -25,6 +27,7 @@ namespace DemoAppReactiveUI.ViewModel
         {
             _searchProduct = new Interaction<Unit, Product>();
             ExecuteSearch = ReactiveCommand.CreateFromObservable(SearchImp);
+            ExecuteCloseWindow = ReactiveCommand.Create(() => { });
         }
 
         public IObservable<Unit> SearchImp()

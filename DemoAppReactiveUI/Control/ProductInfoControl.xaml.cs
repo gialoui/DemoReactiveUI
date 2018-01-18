@@ -45,6 +45,8 @@ namespace DemoAppReactiveUI.Control
         {
             d(this.BindCommand(ViewModel, vm => vm.ExecuteSearch, x => x.SearchBtn));
 
+            d(this.BindCommand(ViewModel, vm => vm.ExecuteCloseWindow, x => x.CloseBtn));
+
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.ID, v => v.ProductID.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.categoryName, v => v.Category.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.price, v => v.SellingPrice.Text));
@@ -73,6 +75,11 @@ namespace DemoAppReactiveUI.Control
                 {
                     interacion.SetOutput(null);
                 }
+            }));
+
+            d(this.WhenAnyObservable(v => v.ViewModel.ExecuteCloseWindow).Subscribe(_ =>
+            {
+                Window.GetWindow(this)?.Close();
             }));
         }
     }

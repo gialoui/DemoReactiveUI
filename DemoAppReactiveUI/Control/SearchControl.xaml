@@ -5,8 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Margin="-271,0,-382,-26">
+             Width="953" Height="326"
+             MaxWidth="953" MaxHeight="326">
+    <Grid Margin="0,8,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="2*" />
@@ -23,11 +24,11 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
-        <Label Content="Barcode" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Content="Barcode" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="4,0,0,0" />
         <TextBox Name="Barcode" Grid.Column="1"  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="160" VerticalContentAlignment="Center" FontSize="18" />
-        <Label Content="Name" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Content="Name" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="4,0,0,0" />
         <TextBox Name="Name" Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="160" VerticalContentAlignment="Center" FontSize="18" />
-        <Label Content="Supplier" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Content="Supplier" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="4,0,0,0" />
         <ComboBox Name="Supplier" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="160" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -35,7 +36,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Label Content="Category" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Content="Category" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="4,0,0,0" />
         <ComboBox Name="Category" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="160" FontSize="18" VerticalContentAlignment="Center">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -49,7 +50,7 @@
                 FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" FontFamily="Arial" />
         <Button Name="Search" Content="Search" HorizontalAlignment="Left" Height="35" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="72"
                 FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" FontFamily="Arial" />
-        <DataGrid Name="ProductList" Grid.Column="2" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="269" Width="674" VerticalAlignment="Top" Grid.RowSpan="6">
+        <DataGrid Name="ProductList" Grid.Column="2" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Center" Height="269" Width="680" VerticalAlignment="Top" Grid.RowSpan="6">
             <DataGrid.Columns>
                 <DataGridTemplateColumn
                     Width="120"

@@ -5,6 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
         mc:Ignorable="d"
-        Title="Product Information" Height="462" Width="1400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <local:ProductInfoControl x:Name="ProductInfoControl" Margin="1400,0,-6,206" />
+        WindowStyle="None"
+        Height="380" Width="1180"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Alt" Key="F4" Command="{Binding Path=ToDelegateCommandThatExecuteNothing}" />
+    </Window.InputBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label FontSize="18" FontWeight="Bold">Product Information</Label>
+        <local:ProductInfoControl x:Name="ProductInfoControl"
+                                  Grid.Row="1" />
+    </Grid>
 </Window>

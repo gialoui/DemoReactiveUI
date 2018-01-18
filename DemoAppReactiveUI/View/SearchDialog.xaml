@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
         mc:Ignorable="d"
-        Title="Search Product" Height="398.504" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Margin="10,0,265,0">
-        <local:SearchControl x:Name="SearchControl" Margin="279,0,116,32" />
+        WindowStyle="None"
+        Height="380"
+        Width="1180"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.5" Color="Black" />
+    </Window.Background>
+    <Grid>
+        <local:SearchControl x:Name="SearchControl" VerticalAlignment="Center" HorizontalAlignment="Center" Background="White" />
     </Grid>
 </Window>

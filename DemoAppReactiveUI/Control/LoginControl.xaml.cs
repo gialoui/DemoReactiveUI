@@ -4,6 +4,7 @@ using DemoAppReactiveUI.ViewModel;
 using ReactiveUI;
 using System;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace DemoAppReactiveUI.Control
@@ -30,14 +31,14 @@ namespace DemoAppReactiveUI.Control
 
         private void HideLoadingIndicator()
         {
-            loadingIndicator.IsSpinning = false;
-            loadingIndicator.Visibility = Visibility.Hidden;
+            Indicator.IsSpinning = false;
+            LoadingIndicator.Visibility = Visibility.Hidden;
         }
 
         private void StartLoadingIndicator()
         {
-            loadingIndicator.IsSpinning = true;
-            loadingIndicator.Visibility = Visibility.Visible;
+            Indicator.IsSpinning = true;
+            LoadingIndicator.Visibility = Visibility.Visible;
         }
 
         public LoginControl()

@@ -36,7 +36,7 @@ namespace DemoAppReactiveUI.ViewModel
 
         private void AddPIN(int number)
         {
-            var PIN = updatePINText(number);
+            updatePINText(number);
         }
 
         private string updatePINText(int number)

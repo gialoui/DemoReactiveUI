@@ -29,18 +29,6 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <hammer:SpinningWheel
-            x:Name="loadingIndicator"
-            Grid.Column="1"
-            Grid.Row="1"
-            Margin="0,30"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            CircleColor="BlueViolet"
-            CircleRadius="4"
-            Radius="14"
-            Speed="0.6" />
-
         <Label Grid.ColumnSpan="3" HorizontalContentAlignment="Center" Content="Enter Your PIN to Start" VerticalAlignment="Center" HorizontalAlignment="Left" Height="30" Width="{Binding RelativeSource=
             {RelativeSource FindAncestor,
             AncestorType={x:Type UserControl}},
@@ -71,5 +59,17 @@
                 FontWeight="Bold" HorizontalContentAlignment="Center" RenderTransformOrigin="0.571,1.816" FontSize="24" Style="{DynamicResource NumPadStyle}" />
         <Button Name="Clear" Grid.Row="5"  Content="Clear" HorizontalAlignment="Center" Height="62" Margin="0" VerticalAlignment="Center" Width="62"
                 FontWeight="Bold" HorizontalContentAlignment="Center" RenderTransformOrigin="0.571,1.816" Grid.Column="1" FontSize="24" Style="{DynamicResource NumPadStyle}" />
+
+        <Grid Name="LoadingIndicator" Grid.RowSpan="7" Grid.ColumnSpan="3" HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="300" Background="#FF514B4B" Opacity="0.8">
+            <hammer:SpinningWheel
+                x:Name="Indicator"
+                Margin="0,30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                CircleColor="DodgerBlue"
+                CircleRadius="4"
+                Radius="14"
+                Speed="0.6" />
+        </Grid>
     </Grid>
 </UserControl>
