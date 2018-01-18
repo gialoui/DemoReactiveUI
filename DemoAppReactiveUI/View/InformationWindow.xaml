@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
         mc:Ignorable="d"
         WindowStyle="None"
-        Height="380" Width="1180"
+        Height="350" Width="1016"
+        BorderBrush="Black" BorderThickness="2"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.InputBindings>
         <KeyBinding Modifiers="Alt" Key="F4" Command="{Binding Path=ToDelegateCommandThatExecuteNothing}" />

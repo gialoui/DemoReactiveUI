@@ -47,12 +47,13 @@ namespace DemoAppReactiveUI.Control
 
             d(this.BindCommand(ViewModel, vm => vm.ExecuteCloseWindow, x => x.CloseBtn));
 
-            d(this.Bind(ViewModel, vm => vm.SelectedProduct.ID, v => v.ProductID.Text));
+            d(this.Bind(ViewModel, vm => vm.SelectedProduct.barcode, v => v.ProductID.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.categoryName, v => v.Category.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.price, v => v.SellingPrice.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.priceCold, v => v.ColdPrice.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.IsOpenPrice, v => v.IsOpenPrice.IsChecked));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.supplierCode, v => v.SupplierCode.Text));
+            d(this.Bind(ViewModel, vm => vm.SelectedProduct.name, v => v.Description.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.barcodeEx1, v => v.Barcode1.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.barcodeEx2, v => v.Barcode2.Text));
             d(this.Bind(ViewModel, vm => vm.SelectedProduct.barcodeEx3, v => v.Barcode3.Text));

@@ -73,7 +73,10 @@ namespace DemoAppReactiveUI.ViewModel
 
             ExecuteResetFilters = ReactiveCommand.Create(ResetFilters);
             ExecuteSearch = ReactiveCommand.Create(SearchProduct);
-            ExecuteSelectProduct = ReactiveCommand.Create(() => { });
+            ExecuteSelectProduct = ReactiveCommand.Create(() =>
+            {
+                SelectedProduct = Product.GetProductByID(SelectedProduct.ID);
+            });
             ExecuteCancel = ReactiveCommand.Create(() => { });
         }
 

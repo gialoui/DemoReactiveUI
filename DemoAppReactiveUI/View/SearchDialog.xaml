@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
         mc:Ignorable="d"
         WindowStyle="None"
-        Height="380"
-        Width="1180"
+        Height="350"
+        Width="1016"
         ResizeMode="NoResize"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen">
