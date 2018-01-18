@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:DemoAppReactiveUI.Control"
+             xmlns:hammer="clr-namespace:Hammer.SpinningWheel;assembly=Hammer.SpinningWheel"
              mc:Ignorable="d"
              Width="300"
         Height="450"
@@ -27,6 +28,18 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+
+        <hammer:SpinningWheel
+            x:Name="loadingIndicator"
+            Grid.Column="1"
+            Grid.Row="1"
+            Margin="0,30"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            CircleColor="BlueViolet"
+            CircleRadius="4"
+            Radius="14"
+            Speed="0.6" />
 
         <Label Grid.ColumnSpan="3" HorizontalContentAlignment="Center" Content="Enter Your PIN to Start" VerticalAlignment="Center" HorizontalAlignment="Left" Height="30" Width="{Binding RelativeSource=
             {RelativeSource FindAncestor,

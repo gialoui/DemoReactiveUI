@@ -44,11 +44,11 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
         <Button Name="ResetFilters" Content="Reset Filters" HorizontalAlignment="Left" VerticalAlignment="Center" Height="35" Grid.Row="4" Grid.ColumnSpan="2"
-                FontSize="18" Background="#B0BEC5" Foreground="White" Margin="10,0,0,0" Width="110" Style="{DynamicResource CommonButtonStyle}" />
-        <Button Name="Cancel" Content="Cancel" HorizontalAlignment="Center" Height="35" Grid.Row="5" VerticalAlignment="Center" Width="68"
-                FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" />
-        <Button Name="Search" Content="Search" HorizontalAlignment="Left" Height="35" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="68"
-                FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" />
+                FontSize="18" Background="#B0BEC5" Foreground="White" Margin="10,0,0,0" Width="120" Style="{DynamicResource CommonButtonStyle}" FontFamily="Arial" />
+        <Button Name="Cancel" Content="Cancel" HorizontalAlignment="Center" Height="35" Grid.Row="5" VerticalAlignment="Center" Width="72"
+                FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" FontFamily="Arial" />
+        <Button Name="Search" Content="Search" HorizontalAlignment="Left" Height="35" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="72"
+                FontSize="18" Background="#B0BEC5" Foreground="White" Style="{DynamicResource CommonButtonStyle}" FontFamily="Arial" />
         <DataGrid Name="ProductList" Grid.Column="2" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="269" Width="674" VerticalAlignment="Top" Grid.RowSpan="6">
             <DataGrid.Columns>
                 <DataGridTemplateColumn

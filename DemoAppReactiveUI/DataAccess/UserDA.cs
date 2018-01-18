@@ -39,5 +39,15 @@ namespace DemoAppReactiveUI.DataAccess
         }
 
         #endregion PIN USAGE
+
+        public static User GetFirstUser()
+        {
+            using (var db = new UserContext())
+            {
+                var query = from u in db.Users where u.Enable select u;
+                var result = query.FirstOrDefault();
+                return result;
+            }
+        }
     }
 }

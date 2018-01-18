@@ -34,7 +34,7 @@ namespace DemoAppReactiveUI.Helper
         public static readonly ILog logger_eventracker = LogManager.GetLogger("[TrackerEvent]");
 
         // log
-        public static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public static readonly ILog logger = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         public static string CACHE_FOLDER = "cache";
         public static string IMAGE_CACHE_FOLDER = "images";
@@ -235,7 +235,7 @@ namespace DemoAppReactiveUI.Helper
 
         public static string getCachePath()
         {
-            var directory = System.AppDomain.CurrentDomain.BaseDirectory;
+            var directory = AppDomain.CurrentDomain.BaseDirectory;
             //Console.WriteLine("App directory: " + directory);
             var cachePath = Path.Combine(directory, CACHE_FOLDER);
             return cachePath;
@@ -243,7 +243,7 @@ namespace DemoAppReactiveUI.Helper
 
         public static string getProductImageCachePath()
         {
-            var directory = System.AppDomain.CurrentDomain.BaseDirectory;
+            var directory = AppDomain.CurrentDomain.BaseDirectory;
             string productImageCachePath = Path.Combine(directory, CACHE_FOLDER + "/" + IMAGE_CACHE_FOLDER + "/" + PRODUCT_CACHE_FOLDER);
             return productImageCachePath;
         }
@@ -409,8 +409,10 @@ namespace DemoAppReactiveUI.Helper
             {
                 var child = VisualTreeHelper.GetChild(obj, i);
 
-                if (child != null && child is TChildItem)
+                if (child is TChildItem)
+                {
                     return (TChildItem)child;
+                }
 
                 var childOfChild = FindVisualChild<TChildItem>(child);
 
@@ -988,7 +990,7 @@ namespace DemoAppReactiveUI.Helper
             {
                 return realCost;
             }
-            else if (taxApplied)
+            else
             {
                 /*
                 For store without GST, the realcost with tax applied will be

@@ -65,7 +65,7 @@ namespace DemoAppReactiveUI.Control
                 var result = searchDialog.ShowDialog();
 
                 // This block will not be executed until dialog is closed
-                if (result ?? false && searchDialog.SelectedProduct != null)
+                if (result ?? false)
                 {
                     interacion.SetOutput(searchDialog.SelectedProduct);
                 }

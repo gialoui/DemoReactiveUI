@@ -1,4 +1,5 @@
-﻿using DemoAppReactiveUI.View;
+﻿using DemoAppReactiveUI.DataAccess;
+using DemoAppReactiveUI.View;
 using DemoAppReactiveUI.ViewModel;
 using ReactiveUI;
 using System;
@@ -27,9 +28,34 @@ namespace DemoAppReactiveUI.Control
             set { ViewModel = value as LoginViewModel; }
         }
 
+        private void HideLoadingIndicator()
+        {
+            loadingIndicator.IsSpinning = false;
+            loadingIndicator.Visibility = Visibility.Hidden;
+        }
+
+        private void StartLoadingIndicator()
+        {
+            loadingIndicator.IsSpinning = true;
+            loadingIndicator.Visibility = Visibility.Visible;
+        }
+
         public LoginControl()
         {
             InitializeComponent();
+            StartLoadingIndicator();
+
+            // Check for existence of user in DB
+            Dispatcher.Invoke((Action)(() =>
+            {
+                if (UserDA.GetFirstUser() != null)
+                {
+                    HideLoadingIndicator();
+                }
+
+                return;
+            }));
+
             ViewModel = new LoginViewModel();
             this.WhenActivated(d => Binding(d));
         }
@@ -56,7 +82,7 @@ namespace DemoAppReactiveUI.Control
                 .Subscribe(_ =>
                 {
                     var newDialog = new InformationWindow();
-                    Window.GetWindow(this).Close();
+                    Window.GetWindow(this)?.Close();
 
                     newDialog.Show();
                 }));
